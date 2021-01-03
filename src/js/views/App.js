@@ -1,10 +1,10 @@
 
-import Navbar from '../components/navbar';
+import Navbar from '../components/bootstrap/navbar';
 import Home from './home';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
       <Navbar />
       <div className="content">
         <Home />

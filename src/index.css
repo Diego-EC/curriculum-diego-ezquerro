@@ -1,7 +1,11 @@
 @import './styles/App.css';
+@import './styles/card.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
   font-family: 'Roboto', sans-serif;
 }
 
+div {
+  border: 1px black solid;
+}

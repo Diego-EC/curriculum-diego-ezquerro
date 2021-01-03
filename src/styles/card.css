@@ -1,0 +1,35 @@
+.card{
+    width: 150px;
+    height: 250px;
+    display: flex;
+}
+
+.card-flip{
+    display: block;
+    margin: 0 auto;
+    transition: transform 300ms;
+    transition-timing-function: linear;
+    transform: rotateY(0deg);
+    color: blue;
+}
+
+.card-flip[flip='1'] {
+    color: red;
+    animation: flip 0.2s ease-in forwards;
+}
+  
+.card-flip > div:hover  {
+    /*transform: rotateY(-180deg);*/
+    /*color: green;
+    animation: flip 0.2s ease-in forwards;*/
+}
+    
+
+@keyframes flip {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(90deg);
+    }
+  }

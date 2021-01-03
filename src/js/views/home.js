@@ -1,15 +1,23 @@
 import { useState } from 'react';
+import PlayingCard from '../components/playing-card';
 import Card from '../components/card';
 
 const Home = () => {
 
     const [cards, setCards] = useState([
-        {pair: 'Diego Ezquerro Calvo'},
+        {pair: 'formacion'},
         {pair: 'formacion'},
         {pair: 'experiencia'},
-        {pair: 'experiencia'}
+        {pair: 'experiencia'},
+        {pair: 'skills'},
+        {pair: 'skills'},
+        {pair: 'soft-skills'},
+        {pair: 'soft-skills'},
+        {pair: 'idiomas'},
+        {pair: 'idiomas'},
+        {pair: 'presentación'},
+        {pair: 'presentación'}
     ]);
-    const [name, setName] = useState('Pepe');
     
     const cardsMap = cards.map(function(card, index){
         return(
@@ -21,7 +29,7 @@ const Home = () => {
 
     return ( 
         <div className="home">
-            <div>{ cardsMap }</div>
+            <div className="row mx-1 d-flex justify-content-center">{ cardsMap }</div>
         </div>
     );
 }
