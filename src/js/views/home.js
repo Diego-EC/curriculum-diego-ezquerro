@@ -1,31 +1,55 @@
 import { useState } from 'react';
-import PlayingCard from '../components/playing-card';
 import Card from '../components/card';
+import soundSuccess from '../../sounds/success.wav';
+import soundError from '../../sounds/error.wav';
 
 const Home = () => {
 
     const [cards, setCards] = useState([
-        {pair: 'formacion'},
-        {pair: 'formacion'},
-        {pair: 'experiencia'},
-        {pair: 'experiencia'},
-        {pair: 'skills'},
-        {pair: 'skills'},
-        {pair: 'soft-skills'},
-        {pair: 'soft-skills'},
-        {pair: 'idiomas'},
-        {pair: 'idiomas'},
-        {pair: 'presentación'},
-        {pair: 'presentación'}
+        {suit: 'formacion'},
+        {suit: 'experiencia'},
+        {suit: 'formacion'},
+        {suit: 'experiencia'},
+        {suit: 'skills'},
+        {suit: 'skills'},
+        {suit: 'soft-skills'},
+        {suit: 'soft-skills'},
+        {suit: 'idiomas'},
+        {suit: 'idiomas'},
+        {suit: 'presentación'},
+        {suit: 'presentación'}
     ]);
-    
+    const [firstClickedSuit, setFirstClickedSuit] = useState("");
+    // TODO: el contador tendrá que ir al flux para que también lo usen las cards, 
+    // no hay click si ya hay dos cartas giradas.
+    const [clickedCardsCounter, setClickedCardsCounter] = useState(0);
+
+    let success = new Audio(soundSuccess);
+    let error = new Audio(soundError);
+
     const cardsMap = cards.map(function(card, index){
         return(
             <Card key={index}
-                pair={card.pair}
+                suit={card.suit}
+                onClickBack={onClickBack}
             />
         )
     })
+
+    function onClickBack(clickedSuit) {
+        setClickedCardsCounter(clickedCardsCounter + 1);
+
+        if (clickedCardsCounter === 1) {
+            // comparar tipos
+            if (firstClickedSuit == clickedSuit) {
+                success.play();
+            } else {
+                error.play();
+            }
+        } else {
+            setFirstClickedSuit([clickedSuit]);
+        }
+    }
 
     return ( 
         <div className="home">
@@ -33,5 +57,6 @@ const Home = () => {
         </div>
     );
 }
- 
+
 export default Home;
+/*eslint eqeqeq: "off"*/

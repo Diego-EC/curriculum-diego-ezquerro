@@ -5,13 +5,23 @@ import Back from '../../images/back.jpg';
 
 const Card = props => {
 	Card.propTypes = {
-		pair: PropTypes.string
+        suit: PropTypes.string,
+        onClickBack: PropTypes.func
     };
     
     const [flip, setFlip] = useState(0)
 
+    function handleClickBackSide() {
+        setFlip(1);
+        onClickBack();
+    }
+
+    function onClickBack() {
+		props.onClickBack(props.suit);
+    }
+    
     return (  
-        <div className="card card-flip m-1 p-0 col-3" onClick={() => setFlip(1)} flip={flip}>
+        <div className="card card-flip m-1 p-0 col-3" onClick={() => handleClickBackSide()} flip={flip}>
             <div className="card-back ">
                 <div className="">
                     <img className="" src={Back} alt="card" />
@@ -20,7 +30,7 @@ const Card = props => {
             <div className="card-front">
                 <div className="">
                     <h1>
-                        FRONT
+                        {props.suit}
                     </h1>
                 </div>
             </div>

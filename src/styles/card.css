@@ -21,19 +21,19 @@ img{
     display: flex;
 }
 
-.card-flip[flip='1'] > .card-front {
+.card-flip[flip='1'] > .card-back {
     animation: flip 0.2s ease-in forwards;
 }
-.card-flip[flip='1'] > .card-back {
+.card-flip[flip='1'] > .card-front {
     animation: flip 0.6s ease-in forwards reverse;
 }
 
-.card-front {
+.card-back {
     transform: rotateY(0deg);
     background-color: blue;
 }
   
-.card-back {
+.card-front {
     width: 150px;
     height: 250px;
    transform: rotateY(180deg);
