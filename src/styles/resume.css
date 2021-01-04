@@ -1,0 +1,9 @@
+.profile {
+    display: none;
+}
+.profile[unlocked='1'] {
+    display: block;
+}
+.languajes {
+    display: none;
+}

@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import PropTypes from "prop-types";
 import '../../styles/card.css';
 import Back from '../../images/back.jpg';

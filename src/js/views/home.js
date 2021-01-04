@@ -1,28 +1,30 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Card from '../components/card';
 import soundSuccess from '../../sounds/success.wav';
 import soundError from '../../sounds/error.wav';
+import Resume from '../components/resume';
 
 const Home = () => {
 
     const [cards, setCards] = useState([
-        {suit: 'formacion'},
-        {suit: 'experiencia'},
-        {suit: 'formacion'},
-        {suit: 'experiencia'},
+        {suit: 'profile'},
+        {suit: 'profile'},
+        {suit: 'experience'},
+        {suit: 'experience'},
+        {suit: 'education'},
+        {suit: 'education'},
         {suit: 'skills'},
         {suit: 'skills'},
+        {suit: 'languajes'},
+        {suit: 'languajes'},
         {suit: 'soft-skills'},
-        {suit: 'soft-skills'},
-        {suit: 'idiomas'},
-        {suit: 'idiomas'},
-        {suit: 'presentación'},
-        {suit: 'presentación'}
+        {suit: 'soft-skills'}
     ]);
     const [firstClickedSuit, setFirstClickedSuit] = useState("");
     // TODO: el contador tendrá que ir al flux para que también lo usen las cards, 
     // no hay click si ya hay dos cartas giradas.
     const [clickedCardsCounter, setClickedCardsCounter] = useState(0);
+    const resumeRef = useRef();
 
     let success = new Audio(soundSuccess);
     let error = new Audio(soundError);
@@ -43,6 +45,8 @@ const Home = () => {
             // comparar tipos
             if (firstClickedSuit == clickedSuit) {
                 success.play();
+                resumeRef.current.unlock();
+
             } else {
                 error.play();
             }
@@ -53,7 +57,14 @@ const Home = () => {
 
     return ( 
         <div className="home">
-            <div className="row mx-1 d-flex justify-content-center">{ cardsMap }</div>
+            <div className="row">
+                <div className="col-6">
+                    <Resume ref={resumeRef} />
+                </div>
+                <div className="col-6">
+                    <div className="row d-flex justify-content-center">{ cardsMap }</div>
+                </div>
+            </div>
         </div>
     );
 }

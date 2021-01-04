@@ -1,5 +1,6 @@
-@import './styles/App.css';
+@import './styles/app.css';
 @import './styles/card.css';
+@import './styles/resume.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
