@@ -25,6 +25,7 @@ const Home = () => {
     // no hay click si ya hay dos cartas giradas.
     const [clickedCardsCounter, setClickedCardsCounter] = useState(0);
     const resumeRef = useRef();
+    const cardRef = useRef();
 
     let success = new Audio(soundSuccess);
     let error = new Audio(soundError);
@@ -34,6 +35,7 @@ const Home = () => {
             <Card key={index}
                 suit={card.suit}
                 onClickBack={onClickBack}
+                ref={cardRef} 
             />
         )
     })
@@ -45,10 +47,12 @@ const Home = () => {
             // comparar tipos
             if (firstClickedSuit == clickedSuit) {
                 success.play();
-                resumeRef.current.unlock();
+                resumeRef.current.unlock(clickedSuit);
 
             } else {
                 error.play();
+                // volver a dar la vuelta
+                cardRef.current.flipToBackSide();
             }
         } else {
             setFirstClickedSuit([clickedSuit]);

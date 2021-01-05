@@ -4,6 +4,33 @@
 .profile[unlocked='1'] {
     display: block;
 }
+.experience {
+    display: none;
+}
+.experience[unlocked='1'] {
+    display: block;
+}
+.education {
+    display: none;
+}
+.education[unlocked='1'] {
+    display: block;
+}
+.skills {
+    display: none;
+}
+.skills[unlocked='1'] {
+    display: block;
+}
 .languajes {
     display: none;
+}
+.languajes[unlocked='1'] {
+    display: block;
+}
+.soft-skills {
+    display: none;
+}
+.soft-skills[unlocked='1'] {
+    display: block;
 }

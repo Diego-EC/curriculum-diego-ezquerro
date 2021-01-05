@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState, forwardRef, useImperativeHandle } from 'react'
 import PropTypes from "prop-types";
 import '../../styles/card.css';
 import Back from '../../images/back.jpg';
 
-const Card = props => {
+const Card = forwardRef((props, ref) => {
 	Card.propTypes = {
         suit: PropTypes.string,
         onClickBack: PropTypes.func
@@ -15,6 +15,13 @@ const Card = props => {
         setFlip(1);
         onClickBack();
     }
+
+    useImperativeHandle(ref, () => ({
+        flipToBackSide() {
+            console.log("flipToBackSide");
+            setFlip(0);
+        }
+    }));
 
     function onClickBack() {
 		props.onClickBack(props.suit);
@@ -36,6 +43,6 @@ const Card = props => {
             </div>
         </div>
     );
-}
+});
 
 export default Card;

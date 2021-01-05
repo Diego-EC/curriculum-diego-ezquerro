@@ -13,8 +13,10 @@ img{
 
 .card-flip > div{
     backface-visibility: hidden;
-    /*transition: transform 300ms;
-    transition-timing-function: linear;*/
+
+    transition: transform 300ms;
+    transition-timing-function: linear;
+
     /*width: 100%;
     height: 100%;*/
     margin: 0;
@@ -22,24 +24,27 @@ img{
 }
 
 .card-flip[flip='1'] > .card-back {
-    animation: flip 0.2s ease-in forwards;
+    /*animation: flip 0.2s ease-in forwards;*/
+    transform: rotateY(-180deg);
 }
 .card-flip[flip='1'] > .card-front {
-    animation: flip 0.6s ease-in forwards reverse;
+    /*animation: flip 0.6s ease-in forwards reverse;*/
+    transform: rotateY(0deg);
 }
+
 
 .card-back {
     transform: rotateY(0deg);
     background-color: blue;
 }
-  
+
 .card-front {
     width: 150px;
     height: 250px;
-   transform: rotateY(180deg);
-   position: absolute;
-   top: 0;
-   background-color: green;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    background-color: green;
 }
 
 @keyframes flip {
@@ -49,4 +54,4 @@ img{
     100% {
       transform: rotateY(90deg);
     }
-  }
+}
