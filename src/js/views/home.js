@@ -1,8 +1,9 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useContext } from 'react';
 import Card from '../components/card';
 import soundSuccess from '../../sounds/success.wav';
 import soundError from '../../sounds/error.wav';
 import Resume from '../components/resume';
+import { Context } from '../store/app-context';
 
 const Home = () => {
 
@@ -27,6 +28,9 @@ const Home = () => {
     const resumeRef = useRef();
     const cardRef = useRef();
 
+
+    const { store, actions } = useContext(Context);
+
     let success = new Audio(soundSuccess);
     let error = new Audio(soundError);
 
@@ -42,7 +46,8 @@ const Home = () => {
 
     function onClickBack(clickedSuit) {
         setClickedCardsCounter(clickedCardsCounter + 1);
-
+        actions.setClickedCards(clickedCardsCounter);
+        console.log("--> " + actions.getClickedCards());
         if (clickedCardsCounter === 1) {
             // comparar tipos
             if (firstClickedSuit == clickedSuit) {
