@@ -374,3 +374,5 @@ yarn-error.log*
 
 # Optional eslint cache
 .eslintcache
+../.eslintcache
+.eslintcache/

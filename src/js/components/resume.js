@@ -17,7 +17,6 @@ const Resume = forwardRef((props, ref) => {
     useImperativeHandle(ref, () => ({
 
         unlock(suit) {
-            console.log("Unlock " + suit);
             switch (suit) {
                 case "profile":
                     setUnlockProfile(1);
