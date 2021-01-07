@@ -49,6 +49,9 @@ const getState = ({ getStore, getActions, setStore }) => {
                 const store = getStore();
                 return store.clickedCards;
 			},
+			cleanClickedCards(){
+				setStore({ clickedCards: [] });
+			},
 			addClickedCard(card){
 				const store = getStore();
 				store.clickedCards.push(card);

@@ -14,38 +14,67 @@ const Card = forwardRef((props, ref) => {
         onClickBack: PropTypes.func
     };
     
-    const [flip, setFlip] = useState(0)
+    const [flip, setFlip] = useState(0);
+    const [unlocked, setUnlocked] = useState(0);
     const { store, actions } = useContext(Context);
     const success = new Audio(soundSuccess);
     const error = new Audio(soundError);
-    const [notPair, setNotPair] = useState(0)
+    const [notPair, setNotPair] = useState(0);
 
     useEffect(() => {
         console.log("--> Card > useEffect");
-        setTimeout(function () {
-            setFlip(0);
-        }, 2000);
-        //setFlip(0);
+        verSiTengoQueVoltearla();
+
+    },[store.limpiar]);
+    
+    function verSiTengoQueVoltearla() {
+        console.log("--> Card > verSiTengoQueVoltearla");
+        const cards = actions.getClickedCards();
+        console.log(cards);
+        for (let card of cards) {
+            console.log(card);
+            if(card.id == props.id){
+                setTimeout(function () {
+                    setFlip(0);
+                    setUnlocked(0);
+                }, 1500);
+            }
+        }
+
+        /*
+        for (var card in cards) {
+            console.log(card);
+            console.log(card.id);
+            if(card.id == props.id){
+                setFlip(0);
+            }
+        }
+        */
         console.log(store.limpiar);
-        
-        },[store.limpiar]);
+        actions.setLimpiar(0);
+    }
 
     function handleClickBackSide(e) {
-        let clickedCardsCounter = actions.getClickedCardsCounter();
-        clickedCardsCounter++;
-        actions.setClickedCardsCounter(clickedCardsCounter);
-        addCardToArray();
-
-        if (clickedCardsCounter <= 2) {
-            setFlip(1);
-            if (clickedCardsCounter == 2) {
-                conpareCards();
+        if (unlocked != 1) {
+            let clickedCardsCounter = actions.getClickedCardsCounter();
+            clickedCardsCounter++;
+            actions.setClickedCardsCounter(clickedCardsCounter);
+            addCardToArray();
+            
+            if (clickedCardsCounter <= 2) {
+                setUnlocked(1);
+                setFlip(1);
+                if (clickedCardsCounter == 2) {
+                    conpareCards();
+                    //actions.setClickedCardsCounter(0);
+                    //actions.cleanClickedCards();
+                }
+            }else{
+                /*setFlip(1);
+                setTimeout(function () {
+                    setFlip(0);
+                }, 2000);*/
             }
-        }else{
-            /*setFlip(1);
-            setTimeout(function () {
-                setFlip(0);
-            }, 2000);*/
         }
     }
 
@@ -73,13 +102,20 @@ const Card = forwardRef((props, ref) => {
         if (clickedCards[0].suit == clickedCards[1].suit) {
             success.play();
             //resumeRef.current.unlock(clickedSuit);
+            //setUnlocked(1);
+            // TODO: unlockear la pareja
         } else {
             error.play();
             setNotPair(1);
             // volver a dar la vuelta: resetFlippedCards
             //resetFlippedCards();
             actions.setLimpiar(1);
+            
         }
+        setTimeout(function () {
+            actions.setClickedCardsCounter(0);
+            actions.cleanClickedCards();
+        }, 2000);
     }
 
     function resetFlippedCards() {
