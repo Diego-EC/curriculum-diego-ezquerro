@@ -1,4 +1,4 @@
-import { useState, useRef, useContext } from 'react';
+import { useState, useRef, useContext, useEffect } from 'react';
 import Card from '../components/card';
 import soundSuccess from '../../sounds/success.wav';
 import soundError from '../../sounds/error.wav';
@@ -7,37 +7,55 @@ import { Context } from '../store/app-context';
 
 const Home = () => {
 
-    const [cards, setCards] = useState([
-        {suit: 'profile'},
-        {suit: 'profile'},
-        {suit: 'experience'},
-        {suit: 'experience'},
-        {suit: 'education'},
-        {suit: 'education'},
-        {suit: 'skills'},
-        {suit: 'skills'},
-        {suit: 'languajes'},
-        {suit: 'languajes'},
-        {suit: 'soft-skills'},
-        {suit: 'soft-skills'}
-    ]);
+    const [cards, setCards] = useState([]);
+
     const [firstClickedSuit, setFirstClickedSuit] = useState("");
     // TODO: el contador tendrá que ir al flux para que también lo usen las cards, 
     // no hay click si ya hay dos cartas giradas.
-    const [clickedCardsCounter, setClickedCardsCounter] = useState(0);
     const resumeRef = useRef();
     const cardRef = useRef();
 
-
     const { store, actions } = useContext(Context);
 
-    let success = new Audio(soundSuccess);
-    let error = new Audio(soundError);
+    const success = new Audio(soundSuccess);
+    const error = new Audio(soundError);
+
+    //let cardsMap;
+
+    useEffect(() => {
+        //setCards(actions.getCards())
+        console.log("ERROR");
+        //cardsMap = getCardsMap();
+        setCards(actions.getCards());
+        
+    }, []);
+
+    function getCardsMap() {
+        //const cards = actions.getCards();
+        //console.log(cards);
+        const cardsMap = cards.map(function(card, index){
+            console.log(index);
+            return(
+                <Card key={index}
+                    id={index}
+                    suit={card.suit}
+                    flipped={0}
+                    onClickBack={onClickBack}
+                    ref={cardRef} 
+                />
+            )
+        })
+        console.log(cardsMap);
+        return cardsMap;
+    }
+    
 
     const cardsMap = cards.map(function(card, index){
         return(
             <Card key={index}
+                id={index}
                 suit={card.suit}
+                flipped={0}
                 onClickBack={onClickBack}
                 ref={cardRef} 
             />
@@ -45,15 +63,12 @@ const Home = () => {
     })
 
     function onClickBack(clickedSuit) {
-        setClickedCardsCounter(clickedCardsCounter + 1);
-        actions.setClickedCards(clickedCardsCounter);
-        console.log("--> " + actions.getClickedCards());
-        if (clickedCardsCounter === 1) {
+        console.log("Home " + actions.getClickedCardsCounter());
+        if (actions.getClickedCardsCounter() === 2) {
             // comparar tipos
             if (firstClickedSuit == clickedSuit) {
                 success.play();
                 resumeRef.current.unlock(clickedSuit);
-
             } else {
                 error.play();
                 // volver a dar la vuelta

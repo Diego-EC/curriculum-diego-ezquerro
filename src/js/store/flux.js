@@ -16,18 +16,48 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			questions: [],
             searchText: "",
-            clickedCards: 0
+			clickedCardsCounter: 0,
+			clickedCards: [],
+			cards: [
+				{ id: 0,  suit: 'profile',     flipped: 0 },
+				{ id: 1,  suit: 'profile',     flipped: 0 },
+				{ id: 2,  suit: 'experience',  flipped: 0 },
+				{ id: 3,  suit: 'experience',  flipped: 0 },
+				{ id: 4,  suit: 'education',   flipped: 0 },
+				{ id: 5,  suit: 'education',   flipped: 0 },
+				{ id: 6,  suit: 'skills',      flipped: 0 },
+				{ id: 7,  suit: 'skills',      flipped: 0 },
+				{ id: 8,  suit: 'languajes',   flipped: 0 },
+				{ id: 9,  suit: 'languajes',   flipped: 0 },
+				{ id: 10, suit: 'soft-skills', flipped: 0 },
+				{ id: 11, suit: 'soft-skills', flipped: 0 }
+			],
+			limpiar: 0
         },
 		actions: {
-            setClickedCards(clickedCards){
-                console.log("setClickedCards");
-                setStore({ clickedCards: clickedCards });
+			setLimpiar(limpiar){
+				setStore({ limpiar: limpiar });
+			},
+			getClickedCardsCounter(){
+				const store = getStore();
+				return store.clickedCardsCounter;
+			},
+            setClickedCardsCounter(clickedCardsCounter){
+                setStore({ clickedCardsCounter: clickedCardsCounter });
             },
             getClickedCards(){
-                console.log("getClickedCards");
                 const store = getStore();
                 return store.clickedCards;
-            },
+			},
+			addClickedCard(card){
+				const store = getStore();
+				store.clickedCards.push(card);
+			},
+			getCards(){
+                const store = getStore();
+                return store.cards;
+			},
+
 			setQuestions(questions) {
 				setStore({ questions: questions });
 			},
