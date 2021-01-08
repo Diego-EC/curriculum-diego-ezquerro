@@ -35,7 +35,7 @@ img{
 
 .card-back {
     transform: rotateY(0deg);
-    background-color: blue;
+    /*background-color: blue;*/
 }
 
 .card-front {
