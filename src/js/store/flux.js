@@ -15,8 +15,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{ id: 5,  suit: 'education'   },
 				{ id: 6,  suit: 'skills'      },
 				{ id: 7,  suit: 'skills'      },
-				{ id: 8,  suit: 'languajes'   },
-				{ id: 9,  suit: 'languajes'   },
+				{ id: 8,  suit: 'languages'   },
+				{ id: 9,  suit: 'languages'   },
 				{ id: 10, suit: 'soft-skills' },
 				{ id: 11, suit: 'soft-skills' }
 			],

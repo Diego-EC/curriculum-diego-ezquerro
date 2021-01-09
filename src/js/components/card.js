@@ -1,7 +1,8 @@
 import { useState, useContext, useEffect } from 'react'
 import PropTypes from "prop-types";
 import '../../styles/card.css';
-import Back from '../../images/back.jpg';
+//import Back from '../../images/back.png';
+//import experience from '../../images/experience.png';
 import { Context } from '../store/app-context';
 
 const Card = (props) => {
@@ -15,7 +16,7 @@ const Card = (props) => {
     const [ flip, setFlip ] = useState(0);
     const [ unlocked, setUnlocked ] = useState(false);
     const { store, actions } = useContext(Context);
-    const TIMEOUT = 1000;
+    const TIMEOUT = 1500;
 
     useEffect(() => {
         checkUnpairedFlippedCards();
@@ -76,14 +77,15 @@ const Card = (props) => {
         <div className="card card-flip m-1 p-0 col-3" onClick={() => handleClickBackSide()} flip={flip}>
             <div className="card-back ">
                 <div className="">
-                    <img className="" src={Back} alt="card" />
+                    <img className="" src={"images/back.png"} alt="card" />
+                    
                 </div>
             </div>
             <div className="card-front">
                 <div className="">
-                    <h1>
-                        {props.suit}
-                    </h1>
+                    
+                        <img className="" src={"images/" + props.suit + ".png"} alt="card" />
+                    
                 </div>
             </div>
         </div>

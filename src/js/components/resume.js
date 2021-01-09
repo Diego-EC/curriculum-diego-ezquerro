@@ -11,7 +11,7 @@ const Resume = forwardRef((props, ref) => {
     const [unlockExperience, setUnlockExperience] = useState(0)
     const [unlockEducation, setUnlockEducation] = useState(0)
     const [unlockSkills, setUnlockSkills] = useState(0)
-    const [unlockLanguajes, setUnlockLanguajes] = useState(0)
+    const [unlockLanguages, setUnlockLanguages] = useState(0)
     const [unlockSoftSkills, setUnlockSoftSkills] = useState(0)
 
     useImperativeHandle(ref, () => ({
@@ -30,8 +30,8 @@ const Resume = forwardRef((props, ref) => {
                 case "skills":
                     setUnlockSkills(1);
                     break;
-                case "languajes":
-                    setUnlockLanguajes(1);
+                case "languages":
+                    setUnlockLanguages(1);
                     break;
                 case "soft-skills":
                     setUnlockSoftSkills(1);
@@ -51,7 +51,7 @@ const Resume = forwardRef((props, ref) => {
             <div className="experience" unlocked={unlockExperience}>experience</div>
             <div className="education" unlocked={unlockEducation}>education</div>
             <div className="skills" unlocked={unlockSkills}>skills</div>
-            <div className="languajes" unlocked={unlockLanguajes}>languajes</div>
+            <div className="languages" unlocked={unlockLanguages}>languages</div>
             <div className="soft-skills" unlocked={unlockSoftSkills}>soft-skills</div>
         </div>
      );

@@ -1,13 +1,14 @@
-img{
+/*img{
     width: 150px;
-    height: 250px;
+    height: 184px;
     display: flex;
     border-radius: 15px;
-}
+}*/
 
 .card{
+    border: none !important;
     width: 150px;
-    height: 250px;
+    height: 203px;
     display: flex;
 }
 
@@ -39,12 +40,11 @@ img{
 }
 
 .card-front {
-    width: 150px;
-    height: 250px;
+    /*width: 150px;
+    height: 203px;*/
     transform: rotateY(180deg);
     position: absolute;
     top: 0;
-    background-color: green;
 }
 
 @keyframes flip {

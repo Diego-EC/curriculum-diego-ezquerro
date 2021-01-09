@@ -22,10 +22,10 @@
 .skills[unlocked='1'] {
     display: block;
 }
-.languajes {
+.languages {
     display: none;
 }
-.languajes[unlocked='1'] {
+.languages[unlocked='1'] {
     display: block;
 }
 .soft-skills {
