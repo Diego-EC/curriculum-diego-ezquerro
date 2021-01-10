@@ -1,8 +1,13 @@
 import { useState, useContext, useEffect } from 'react'
 import PropTypes from "prop-types";
 import '../../styles/card.css';
-//import Back from '../../images/back.png';
-//import experience from '../../images/experience.png';
+import back from './images/back.png';
+import education from './images/education.png';
+import experience from './images/experience.png';
+import languages from './images/languages.png';
+import profile from './images/profile.png';
+import skills from './images/skills.png';
+import softSkills from './images/soft-skills.png';
 import { Context } from '../store/app-context';
 
 const Card = (props) => {
@@ -73,19 +78,42 @@ const Card = (props) => {
 		props.onClickBack(successfulPairing, props.suit);
     }
     
+
+    let cardImage = back;
+    switch (props.suit) {
+        case "education":
+            cardImage = education;
+            break;
+        case "experience":
+            cardImage = experience;
+            break;
+        case "languages":
+            cardImage = languages;
+            break;
+        case "profile":
+            cardImage = profile;
+            break;
+        case "skills":
+            cardImage = skills;
+            break;
+        case "soft-skills":
+            cardImage = softSkills;
+            break;
+        default:
+            cardImage = back;
+            break;
+    }
+
     return (  
         <div className="card card-flip m-1 p-0 col-3" onClick={() => handleClickBackSide()} flip={flip}>
             <div className="card-back ">
                 <div className="">
-                    <img className="" src={"images/back.png"} alt="card" />
-                    
+                    <img className="" src={back} alt="card" />
                 </div>
             </div>
             <div className="card-front">
                 <div className="">
-                    
-                        <img className="" src={"images/" + props.suit + ".png"} alt="card" />
-                    
+                    <img className="" src={cardImage} alt="card" />
                 </div>
             </div>
         </div>
