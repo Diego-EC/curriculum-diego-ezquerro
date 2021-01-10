@@ -13,7 +13,9 @@ const Home = () => {
     const error = new Audio(soundError);
 
     useEffect(() => {
-        setCards(actions.getCards());
+        let cardsTemp = actions.getCards();
+        shuffleCards(cardsTemp);
+        setCards(cardsTemp)
     }, []);
 
     const cardsMap = cards.map(function(card, index){
@@ -33,6 +35,14 @@ const Home = () => {
             resumeRef.current.unlock(suit);
         } else {
             error.play();
+        }
+    }
+
+    // Shuffle Array In place: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+    function shuffleCards (cards){
+        for (var i = cards.length - 1; i > 0; i--) {
+            var rand = Math.floor(Math.random() * (i + 1));
+            [cards[i], cards[rand]] = [cards[rand], cards[i]]
         }
     }
 
