@@ -34,3 +34,25 @@
 .soft-skills[unlocked='1'] {
     display: block;
 }
+
+.td-30{
+    width: 30%;
+}
+.td-70{
+    width: 70%;
+}
+td{
+    text-align: left;
+}
+.table{
+    border-bottom: 1px solid black;
+}
+.badge-pill{
+    color: black;
+}
+.skill{
+    border: 1px solid black;
+    border-radius: 25px;
+    margin-right: 5px;
+    padding: 5px 6px 5px 6px;
+}

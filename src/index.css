@@ -1,10 +1,15 @@
 @import './styles/app.css';
 @import './styles/card.css';
 @import './styles/resume.css';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+h1, h2, h3, h4, h5, .head-text-style {
+  font-family: 'Lato', sans-serif;
+}
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Merriweather', serif;
 }
 
 div {
