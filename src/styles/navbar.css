@@ -2,7 +2,6 @@ a{
     text-decoration: none;
 }
 
-/* unvisited link */
 a:link, a:visited, a:hover, a:active {
     color: black;
 }
