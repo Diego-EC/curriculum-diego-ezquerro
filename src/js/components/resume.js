@@ -208,7 +208,7 @@ const Resume = forwardRef((props, ref) => {
     );
 
     return ( 
-        <div className="resume">
+        <div className="resume overflow-auto">
             <div className="profile" unlocked={unlockProfile}>{profile}</div>
             <div className="experience" unlocked={unlockExperience}>{experience}</div>
             <div className="education" unlocked={unlockEducation}>{education}</div>
