@@ -15,7 +15,7 @@ const Navbar = () => {
                         <i className="fas fa-phone"></i> <span className="head-text-style"> +34 625 848 735</span>
                     </li>
                     <li className="nav-item nav-link">
-                        <a href="https://www.linkedin.com/in/diegoec/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i> <span className="head-text-style"> https://www.linkedin.com/in/diegoec/</span></a>
+                        <a href="https://www.linkedin.com/in/diegoec/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i> <span className="head-text-style"> https://www.linkedin.com/in/diegoec</span></a>
                     </li>
                     <li className="nav-item nav-link">                        
                         <i className="fab fa-skype"></i> <span className="head-text-style"> diego.ezquerro.calvo</span>
