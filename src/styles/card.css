@@ -37,6 +37,7 @@
 .card-back {
     transform: rotateY(0deg);
     /*background-color: blue;*/
+    cursor: pointer;
 }
 
 .card-front {
