@@ -26,7 +26,7 @@ const Navbar = () => {
     );
 
     return ( 
-    <nav className="navbar navbar-expand-sm navbar-light bg-light shadow mb-3 d-flex justify-content-center">
+    <nav className="navbar navbar-expand-sm navbar-light mb-3 d-flex justify-content-center">
         <div className="">
             <h1 className="highlighted-text">Diego Ezquerro Calvo</h1>
             <h3 className="highlighted-text">Junior Fullstack Developer</h3>
