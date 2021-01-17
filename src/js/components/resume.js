@@ -52,15 +52,15 @@ const Resume = forwardRef((props, ref) => {
         <div className="resume-section">
             <h3 className="">Experience</h3>
             <table className="table table-borderless">
-                <thead>
+                <thead className="">
                     <tr>
-                        <th className="td-30" scope="col"></th>
-                        <th className="td-70" scope="col"></th>
+                        <th className="td-left" scope="col"></th>
+                        <th className="td-right" scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td className="">07/2018 – 07/2019</td>
+                        <td className="">07/2018 - 07/2019</td>
                         <td className="">UNITY DEVELOPER</td>
                     </tr>
                     <tr>
@@ -77,8 +77,8 @@ const Resume = forwardRef((props, ref) => {
             <table className="table table-borderless">
                 <thead>
                     <tr>
-                        <th className="td-30" scope="col"></th>
-                        <th className="td-70" scope="col"></th>
+                        <th className="td-left" scope="col"></th>
+                        <th className="td-right" scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -100,8 +100,8 @@ const Resume = forwardRef((props, ref) => {
             <table className="table table-borderless">
                 <thead>
                     <tr>
-                        <th className="td-30" scope="col"></th>
-                        <th className="td-70" scope="col"></th>
+                        <th className="td-left" scope="col"></th>
+                        <th className="td-right" scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -128,8 +128,8 @@ const Resume = forwardRef((props, ref) => {
             <table className="table table-borderless">
                 <thead>
                     <tr>
-                        <th className="td-30" scope="col"></th>
-                        <th className="td-70" scope="col"></th>
+                        <th className="td-left" scope="col"></th>
+                        <th className="td-right" scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -150,8 +150,8 @@ const Resume = forwardRef((props, ref) => {
             <table className="table table-borderless">
                 <thead>
                     <tr>
-                        <th className="td-30" scope="col"></th>
-                        <th className="td-70" scope="col"></th>
+                        <th className="td-left" scope="col"></th>
+                        <th className="td-right" scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>

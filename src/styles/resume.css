@@ -35,10 +35,10 @@
     display: block;
 }
 
-.td-30{
+.td-left{
     width: 30%;
 }
-.td-70{
+.td-right{
     width: 70%;
 }
 td{
@@ -67,7 +67,7 @@ td{
     padding-bottom: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    border: 0.1rem solid black;
+    border: 0.15rem solid #c3c3c3;
     border-radius: 2rem;
     margin-bottom: 1.5rem;
     box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.2);
