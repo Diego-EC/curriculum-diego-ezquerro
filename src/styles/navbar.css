@@ -1,7 +1,9 @@
 a{
     text-decoration: none;
 }
-
-a:link, a:visited, a:hover, a:active {
-    color: black;
+.navbar{
+    background-color:  #006400;
+    box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.2);
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
 }

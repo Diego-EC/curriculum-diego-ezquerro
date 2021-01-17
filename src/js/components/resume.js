@@ -43,14 +43,14 @@ const Resume = forwardRef((props, ref) => {
 
     const profile = (
         <div className="resume-section">
-            <h3 className="highlighted-text">Profile</h3>
+            <h3 className="">Profile</h3>
             <p>After more than ten years working in software development I can contribute with my experience to any kind of proyect. I have also finished recently a Fullstack Developer course in a programming Bootcamp and I have obtained knowledge in HTML5, CSS, Javascript, React, Python, Flask, SQL, Git, Bootstrap. I am looking for an opportunity that allows me to continue my development and grow in the programming sector.</p>
         </div>
     );
 
     const experience = (
         <div className="resume-section">
-            <h3 className="highlighted-text">Experience</h3>
+            <h3 className="">Experience</h3>
             <table className="table table-borderless">
                 <thead>
                     <tr>
@@ -124,7 +124,7 @@ const Resume = forwardRef((props, ref) => {
 
     const education = (
         <div className="resume-section">
-            <h3 className="highlighted-text">Education</h3>
+            <h3 className="">Education</h3>
             <table className="table table-borderless">
                 <thead>
                     <tr>
@@ -174,7 +174,7 @@ const Resume = forwardRef((props, ref) => {
 
     const skills = (
         <div className="resume-section">
-            <h3 className="highlighted-text">Skills</h3>
+            <h3 className="">Skills</h3>
             <p>
                 <span className="skill">React</span>
                 <span className="skill">Bootstrap</span>
@@ -193,14 +193,14 @@ const Resume = forwardRef((props, ref) => {
 
     const languages = (
         <div className="resume-section">
-            <h3 className="highlighted-text">Languages</h3>
+            <h3 className="">Languages</h3>
             <span>English (F.C.E.)</span> <span>|</span> <span>Spanish (Native)</span>
         </div>
     );
 
     const softSkills = (
         <div className="resume-section">
-            <h3 className="highlighted-text">Soft Skills</h3>
+            <h3 className="">Soft Skills</h3>
             <span className="skill">Creative</span>
             <span className="skill">Insightful</span>
             <span className="skill">Passionate</span>
