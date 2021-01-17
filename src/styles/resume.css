@@ -60,3 +60,19 @@ td{
 .resume{
     height: 75vh;
 }
+
+.resume-section{
+    background-color: white;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 0.1rem solid black;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0.3rem 0.3rem #888888;
+}
+
+.resume-section > h3 {
+    margin-bottom: 1.5rem;
+}

@@ -1,5 +1,5 @@
 @import './styles/app.css';
-@import './styles/card.css';
+/*@import './styles/card.css';*/
 @import './styles/resume.css';
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Merriweather:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
@@ -35,4 +35,8 @@ h1, h2, h3, h4, h5, .head-text-style {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: green; 
+}
+
+body {
+  background-color: rgba(229, 229, 229, 0.2);
 }

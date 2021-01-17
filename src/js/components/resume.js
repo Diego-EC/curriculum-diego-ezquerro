@@ -42,15 +42,15 @@ const Resume = forwardRef((props, ref) => {
     }));
 
     const profile = (
-        <div className="">
-            <h3 className="mt-3 mb-3 highlighted-text">Profile</h3>
+        <div className="resume-section">
+            <h3 className="highlighted-text">Profile</h3>
             <p>After more than ten years working in software development I can contribute with my experience to any kind of proyect. I have also finished recently a Fullstack Developer course in a programming Bootcamp and I have obtained knowledge in HTML5, CSS, Javascript, React, Python, Flask, SQL, Git, Bootstrap. I am looking for an opportunity that allows me to continue my development and grow in the programming sector.</p>
         </div>
     );
 
     const experience = (
-        <div>
-            <h3 className="mt-5 highlighted-text">Experience</h3>
+        <div className="resume-section">
+            <h3 className="highlighted-text">Experience</h3>
             <table className="table table-borderless">
                 <thead>
                     <tr>
@@ -123,8 +123,8 @@ const Resume = forwardRef((props, ref) => {
     );
 
     const education = (
-        <div>
-            <h3 className="mt-5 highlighted-text">Education</h3>
+        <div className="resume-section">
+            <h3 className="highlighted-text">Education</h3>
             <table className="table table-borderless">
                 <thead>
                     <tr>
@@ -173,8 +173,8 @@ const Resume = forwardRef((props, ref) => {
     );
 
     const skills = (
-        <div>
-            <h3 className="mt-5 mb-3 highlighted-text">Skills</h3>
+        <div className="resume-section">
+            <h3 className="highlighted-text">Skills</h3>
             <p>
                 <span className="skill">React</span>
                 <span className="skill">Bootstrap</span>
@@ -192,15 +192,15 @@ const Resume = forwardRef((props, ref) => {
     );
 
     const languages = (
-        <div className="mt-5 mb-3">
+        <div className="resume-section">
             <h3 className="highlighted-text">Languages</h3>
             <span>English (F.C.E.)</span> <span>|</span> <span>Spanish (Native)</span>
         </div>
     );
 
     const softSkills = (
-        <div>
-            <h3 className="mt-5 mb-3 highlighted-text">Soft Skills</h3>
+        <div className="resume-section">
+            <h3 className="highlighted-text">Soft Skills</h3>
             <span className="skill">Creative</span>
             <span className="skill">Insightful</span>
             <span className="skill">Passionate</span>
@@ -208,7 +208,7 @@ const Resume = forwardRef((props, ref) => {
     );
 
     return ( 
-        <div className="resume overflow-auto">
+        <div className="container resume overflow-auto">
             <div className="profile" unlocked={unlockProfile}>{profile}</div>
             <div className="experience" unlocked={unlockExperience}>{experience}</div>
             <div className="education" unlocked={unlockEducation}>{education}</div>

@@ -105,7 +105,7 @@ const Card = (props) => {
     }
 
     return (  
-        <div className="card card-flip m-1 p-0 col-3" onClick={() => handleClickBackSide()} flip={flip}>
+        <div className="playing-card card card-flip m-1 p-0 col-3" onClick={() => handleClickBackSide()} flip={flip}>
             <div className="card-back ">
                 <div className="">
                     <img className="" src={back} alt="card" />
