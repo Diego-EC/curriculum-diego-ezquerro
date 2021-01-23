@@ -14,6 +14,7 @@ h1, h2, h3, h4, h5, .head-text-style {
 
 .highlighted-text{
   color: white;
+  font-weight: bold;
 }
 
 /* https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
@@ -43,11 +44,25 @@ body {
   .nav {
   }
   .text-title{
-    font-size: 0.9rem;
+    font-size: 2rem;
+  }
+  .text-subtitle{
+    font-size: 1.5rem;
+  }
+  .text-header{
+    font-size: 1rem;
+  }
+  .text-contact{
+    font-size: 0.8rem;
   }
   .text-detail{
     font-size: 0.7rem;
   }
+}
+
+
+.text-wrap{
+  word-wrap: break-word;
 }
 
 /* Small devices (landscape phones, 576px and up) */
