@@ -43,14 +43,14 @@ const Resume = forwardRef((props, ref) => {
 
     const profile = (
         <div className="resume-section">
-            <h3 className="text-title">Profile</h3>
+            <h3 className="text-header">Profile</h3>
             <p className="text-detail">After more than ten years working in software development I can contribute with my experience to any kind of proyect. I have also finished recently a Fullstack Developer course in a programming Bootcamp and I have obtained knowledge in HTML5, CSS, Javascript, React, Python, Flask, SQL, Git, Bootstrap. I am looking for an opportunity that allows me to continue my development and grow in the programming sector.</p>
         </div>
     );
 
     const experience = (
         <div className="resume-section">
-            <h3 className="text-title">Experience</h3>
+            <h3 className="text-header">Experience</h3>
             <table className="table table-borderless">
                 <thead className="">
                     <tr>
@@ -124,7 +124,7 @@ const Resume = forwardRef((props, ref) => {
 
     const education = (
         <div className="resume-section">
-            <h3 className="text-title">Education</h3>
+            <h3 className="text-header">Education</h3>
             <table className="table table-borderless">
                 <thead>
                     <tr>
@@ -174,7 +174,7 @@ const Resume = forwardRef((props, ref) => {
 
     const skills = (
         <div className="resume-section">
-            <h3 className="text-title">Skills</h3>
+            <h3 className="text-header">Skills</h3>
             <p className="d-flex flex-wrap justify-content-center">
                 <span className="skill text-detail">React</span>
                 <span className="skill text-detail">Bootstrap</span>
@@ -191,14 +191,14 @@ const Resume = forwardRef((props, ref) => {
 
     const languages = (
         <div className="resume-section">
-            <h3 className="text-title">Languages</h3>
+            <h3 className="text-header">Languages</h3>
             <span className="text-detail">English (F.C.E.)</span> <span>|</span> <span className="text-detail">Spanish (Native)</span>
         </div>
     );
 
     const softSkills = (
         <div className="resume-section">
-            <h3 className="text-title">Soft Skills</h3>
+            <h3 className="text-header">Soft Skills</h3>
             <p className="d-flex flex-wrap justify-content-center">
                 <span className="skill text-detail">Creative</span>
                 <span className="skill text-detail">Insightful</span>
