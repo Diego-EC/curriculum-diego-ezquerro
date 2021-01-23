@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/curriculum-diego-ezquerro/static/css/main.d4c6bf8c.chunk.css",
+    "main.js": "/curriculum-diego-ezquerro/static/js/main.d5e095a3.chunk.js",
+    "main.js.map": "/curriculum-diego-ezquerro/static/js/main.d5e095a3.chunk.js.map",
+    "runtime-main.js": "/curriculum-diego-ezquerro/static/js/runtime-main.d6f8e15d.js",
+    "runtime-main.js.map": "/curriculum-diego-ezquerro/static/js/runtime-main.d6f8e15d.js.map",
+    "static/js/2.ac3b6ff2.chunk.js": "/curriculum-diego-ezquerro/static/js/2.ac3b6ff2.chunk.js",
+    "static/js/2.ac3b6ff2.chunk.js.map": "/curriculum-diego-ezquerro/static/js/2.ac3b6ff2.chunk.js.map",
+    "index.html": "/curriculum-diego-ezquerro/index.html",
+    "static/css/main.d4c6bf8c.chunk.css.map": "/curriculum-diego-ezquerro/static/css/main.d4c6bf8c.chunk.css.map",
+    "static/js/2.ac3b6ff2.chunk.js.LICENSE.txt": "/curriculum-diego-ezquerro/static/js/2.ac3b6ff2.chunk.js.LICENSE.txt",
+    "static/media/back.a60a2845.png": "/curriculum-diego-ezquerro/static/media/back.a60a2845.png",
+    "static/media/error.84b2cce7.wav": "/curriculum-diego-ezquerro/static/media/error.84b2cce7.wav",
+    "static/media/languages.9a789acb.png": "/curriculum-diego-ezquerro/static/media/languages.9a789acb.png",
+    "static/media/soft-skills.20ebb146.png": "/curriculum-diego-ezquerro/static/media/soft-skills.20ebb146.png",
+    "static/media/success.d59181a6.wav": "/curriculum-diego-ezquerro/static/media/success.d59181a6.wav"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d6f8e15d.js",
+    "static/js/2.ac3b6ff2.chunk.js",
+    "static/css/main.d4c6bf8c.chunk.css",
+    "static/js/main.d5e095a3.chunk.js"
+  ]
+}
