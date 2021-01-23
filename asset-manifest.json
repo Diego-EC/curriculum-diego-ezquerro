@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/curriculum-diego-ezquerro/static/css/main.d4c6bf8c.chunk.css",
-    "main.js": "/curriculum-diego-ezquerro/static/js/main.d5e095a3.chunk.js",
-    "main.js.map": "/curriculum-diego-ezquerro/static/js/main.d5e095a3.chunk.js.map",
+    "main.js": "/curriculum-diego-ezquerro/static/js/main.f15a0956.chunk.js",
+    "main.js.map": "/curriculum-diego-ezquerro/static/js/main.f15a0956.chunk.js.map",
     "runtime-main.js": "/curriculum-diego-ezquerro/static/js/runtime-main.d6f8e15d.js",
     "runtime-main.js.map": "/curriculum-diego-ezquerro/static/js/runtime-main.d6f8e15d.js.map",
     "static/js/2.ac3b6ff2.chunk.js": "/curriculum-diego-ezquerro/static/js/2.ac3b6ff2.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.d6f8e15d.js",
     "static/js/2.ac3b6ff2.chunk.js",
     "static/css/main.d4c6bf8c.chunk.css",
-    "static/js/main.d5e095a3.chunk.js"
+    "static/js/main.f15a0956.chunk.js"
   ]
 }
