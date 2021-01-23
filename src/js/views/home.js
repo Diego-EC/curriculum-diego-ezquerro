@@ -47,13 +47,32 @@ const Home = () => {
     }
 
     return ( 
-        <div className="home">
+        <div className="home container">
             <div className="row">
-                <div className="col-6">
+                <div className="col-md-6 order-md-1 order-sm-2 order-2 mt-5 mt-md-0">
                     <Resume ref={resumeRef} />
                 </div>
-                <div className="col-6">
-                    <div className="row d-flex justify-content-center">{ cardsMap }</div>
+                <div className="col-md-6 order-md-2 order-sm-1 order-1">
+                    <div className="container px-0">
+                        <div className="row d-flex justify-content-center">
+                            <div className="col-3 px-0"> { cardsMap[0] } </div>
+                            <div className="col-3 px-0"> { cardsMap[3] } </div>
+                            <div className="col-3 px-0"> { cardsMap[6] } </div>
+                            <div className="col-3 px-0"> { cardsMap[9] } </div>
+                        </div>
+                        <div className="row d-flex justify-content-center">
+                            <div className="col-3 px-0"> { cardsMap[1] } </div>
+                            <div className="col-3 px-0"> { cardsMap[4] } </div>
+                            <div className="col-3 px-0"> { cardsMap[7] } </div>
+                            <div className="col-3 px-0"> { cardsMap[10] } </div>
+                        </div>
+                        <div className="row d-flex justify-content-center">
+                            <div className="col-3 px-0"> { cardsMap[2] } </div>
+                            <div className="col-3 px-0"> { cardsMap[5] } </div>
+                            <div className="col-3 px-0"> { cardsMap[8] } </div>
+                            <div className="col-3 px-0"> { cardsMap[11] } </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

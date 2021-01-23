@@ -1,9 +1,9 @@
 .playing-card{
     width: 150px;
-    height: 203px;
     background-color: rgba(0,0,0,0);
     border: none !important;
     display: flex;
+    max-width: 100%;
 }
 
 .card-flip > div{
