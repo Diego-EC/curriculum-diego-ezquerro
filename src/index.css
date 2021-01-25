@@ -1,5 +1,4 @@
 @import './styles/app.css';
-/*@import './styles/card.css';*/
 @import './styles/resume.css';
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Merriweather:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
@@ -41,8 +40,6 @@ body {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .nav {
-  }
   .text-title{
     font-size: 2rem;
   }
@@ -60,33 +57,18 @@ body {
   }
 }
 
-
-.text-wrap{
-  word-wrap: break-word;
-}
-
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { 
-  .nav {
-  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) { 
-  .nav {
-  } 
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-  .nav {
-  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-  .nav {
-  }
-
-
 }
