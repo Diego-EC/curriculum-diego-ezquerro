@@ -1,5 +1,5 @@
-# Your can see is published at 
-https://diego-ec.github.io/curriculum-diego-ezquerro/
+# You can see is published at 
+https://diego-ec.github.io/curriculum-diego-ezquerro/Cancel changes
 
 # Deploy to GitHub Pages
     $ npm run predeploy
